@@ -8,6 +8,7 @@ class CalculatorApplicationTests {
 
 	@Test
 	void contextLoads() {
+		CalculatorApplication.main(new String[] {"test1", "test2"});
 	}
 
 }
