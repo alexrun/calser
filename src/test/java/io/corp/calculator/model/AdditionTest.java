@@ -17,7 +17,7 @@ public class AdditionTest {
 	Addition operation;
 	
 	@Test
-	public void shouldHandleAddOperation() {
+	public void shouldHandleAnAdditionOperation() {
 		assertTrue(operation.handles("add"));
 	}
 	

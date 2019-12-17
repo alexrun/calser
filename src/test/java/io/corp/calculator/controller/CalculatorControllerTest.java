@@ -43,4 +43,28 @@ public class CalculatorControllerTest {
 		Assertions.assertEquals("144", content);
 	}
 
+	@Test
+	void shouldSubtractTwoParameters() throws Exception {
+		request = get("/calculator")
+				.param("firstValue", "1234.56")
+				.param("secondValue", "78.9")
+				.param("operationType", "sub").contentType(MediaType.TEXT_PLAIN);
+		String content = mockMvc.perform(request)
+				.andDo(print()).andExpect(status().isOk()).andReturn().getResponse()
+				.getContentAsString();
+		Assertions.assertEquals("1155.66", content);
+	}
+
+	@Test
+	void shouldDivideTwoParameters() throws Exception {
+		request = get("/calculator")
+				.param("firstValue", "360.125")
+				.param("secondValue", "3.2")
+				.param("operationType", "div").contentType(MediaType.TEXT_PLAIN);
+		String content = mockMvc.perform(request)
+				.andDo(print()).andExpect(status().isOk()).andReturn().getResponse()
+				.getContentAsString();
+		Assertions.assertEquals("112.5391", content);
+	}
+
 }

@@ -10,21 +10,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class MultiplicationTest {
+public class SubtractionTest {
 	
 	@Autowired
-	Multiplication operation;
+	Subtraction operation;
 	
 	@Test
-	public void shouldHandleMultiplicationOperation() {
-		assertTrue(operation.handles("mul"));
+	public void shouldHandleSubtractionOperation() {
+		assertTrue(operation.handles("sub"));
 	}
 	
 	@Test
-	public void shouldComputeAMultiplication() {
-		BigDecimal firstValue = new BigDecimal("4");
+	public void shouldComputeASubtraction() {
+		BigDecimal firstValue = new BigDecimal("8");
 		BigDecimal secondValue = new BigDecimal("2");
-		BigDecimal resultValue = new BigDecimal("8");
+		BigDecimal resultValue = new BigDecimal("6");
 		assertEquals(resultValue, operation.compute(firstValue, secondValue));
 	}
 

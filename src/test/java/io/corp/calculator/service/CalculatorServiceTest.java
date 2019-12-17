@@ -51,6 +51,10 @@ public class CalculatorServiceTest {
 		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.00000"), new BigDecimal("9.00000"), "add").toPlainString()));
 		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.48525"), new BigDecimal("9.15441"), "mul").toPlainString()));
 		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.00000"), new BigDecimal("9.00000"), "mul").toPlainString()));
+		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.48525"), new BigDecimal("9.15441"), "sub").toPlainString()));
+		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.00000"), new BigDecimal("9.00000"), "sub").toPlainString()));
+		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.48525"), new BigDecimal("9.15441"), "div").toPlainString()));
+		assertTrue(precisionLessThanOrEqualToFour(service.calculate(new BigDecimal("10.00000"), new BigDecimal("9.00000"), "div").toPlainString()));
     }
 
     private boolean precisionLessThanOrEqualToFour(String value) {
