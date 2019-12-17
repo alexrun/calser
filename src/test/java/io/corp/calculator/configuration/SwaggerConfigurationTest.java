@@ -8,8 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class SwaggerConfigurationTest {
 	@Test
-	public void shouldGetProFoodApiInfo() {
+	public void shouldGetCalculatorServiceApiInfo() {
 		SwaggerConfiguration config = new SwaggerConfiguration();
-		assertEquals("Calculator Online REST api", config.buildProFoodApiInfo().getTitle());
+		assertEquals("Calculator Online REST api", config.buildCalculatorServiceApiInfo().getTitle());
 	}
 }

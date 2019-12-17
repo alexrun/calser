@@ -14,14 +14,14 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfiguration {
 
 	@Bean
-    public Docket proFoodDocketSwaggerDevelopEndpoint() {
+    public Docket calculatorServiceDocketSwaggerDevelopEndpoint() {
 		return buildDocket().enable(true);
     }
  
-    public ApiInfo buildProFoodApiInfo() {
+    public ApiInfo buildCalculatorServiceApiInfo() {
         return new ApiInfoBuilder()
-                .title("Calculator Online REST api")
-                .description("PoC of a REST api, Calculator")
+                .title("Calculator Online REST API")
+                .description("PoC of a REST API, Calculator")
                 .license("Apache License Version 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .version("1.0.0")
@@ -30,8 +30,8 @@ public class SwaggerConfiguration {
 	
 	private Docket buildDocket() {
 		return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("api-pro-food")
-                .apiInfo(buildProFoodApiInfo())
+                .groupName("api-calculator-service")
+                .apiInfo(buildCalculatorServiceApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
